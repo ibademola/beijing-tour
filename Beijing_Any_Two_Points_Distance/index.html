@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Beijing Tour</title>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ArcGIS Maps SDK CSS -->
+    <link rel="stylesheet"
+          href="https://js.arcgis.com/5.1/esri/themes/light/main.css">
+
+    <!-- ArcGIS Maps SDK -->
+    <script type="module"
+            src="https://js.arcgis.com/5.1/"></script>
+</head>
+
+<body>
+
+    <!-- Page title -->
+    <header>
+        <h1>Beijing Tour</h1>
+    </header>
+
+    <!-- Main part of the app -->
+    <main>
+
+        <!-- LEFT: selected photograph -->
+        <section id="photo-panel">
+
+            <h2>Beijing Photos</h2>
+
+            <img id="selected-photo"
+                 src="images/Beijing Olympic Stadium.jpeg"
+                 alt="Selected Beijing location">
+
+            <h3 id="photo-title">Beijing Olympic Stadium</h3>
+
+            <!-- Distance calculator for two existing locations -->
+            <section id="distance-panel">
+                <h3>Distance Between Two Locations</h3>
+                <label for="point1">First location</label>
+                <select id="point1"></select>
+
+                <label for="point2">Second location</label>
+                <select id="point2"></select>
+
+                <button id="distance-btn">Calculate Distance</button>
+                <p id="distance-result">Click the button to calculate.</p>
+            </section>
+
+        </section>
+
+
+        <!-- RIGHT: map -->
+        <section id="map"></section>
+
+    </main>
+
+
+    <!-- Bottom photo gallery -->
+    <section id="gallery-section">
+
+    <div id="gallery-header">
+
+        <h2>Additional locations</h2>
+
+        <button id="gallery-toggle" title="Collapse gallery">
+            <span id="toggle-arrow"></span>
+        </button>
+
+    </div>
+
+    <div id="gallery"></div>
+
+</section>
+
+
+    <!-- Our JavaScript -->
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
